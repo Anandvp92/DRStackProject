@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import list_todo
+from .views import logging
 urlpatterns=[
-    path('listtodo/',list_todo,name="list_todo"),
+    path('logging/',logging,name="logging"),
 ]
