@@ -5,4 +5,4 @@ class UserForm(forms.ModelForm):
     confirm_password=forms.CharField(widget=forms.PasswordInput())  
     class Meta:
         model= User
-        fields=["first_name","last_name","phone_number","email"]
+        fields=["first_name","last_name","phone_number","email","profile_pic"]
