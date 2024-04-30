@@ -12,5 +12,6 @@ def logging(request):
         newuser=UserForm(request.POST)
         if newuser.is_valid():
             newuser.save()
+            return HttpResponse("User created")
     userform=UserForm()
     return render(request,"register.html",{"userform":userform})

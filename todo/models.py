@@ -31,6 +31,7 @@ class User(AbstractUser):
     profile_pic=models.ImageField(_("Profile Pic"),blank=True,null=True,upload_to="static/profilepic/")
     last_login=models.DateTimeField(_("Last Login"),auto_now_add=True)
     phone_number=PhoneNumberField(_("Phone number"),unique=True)
+    is_staff=models.BooleanField(_("Is Staff"),default=True)
     USERNAME_FIELD="email"
     REQUIRED_FIELDS=["first_name","last_name","phone_number"]
     objects= CustomUserManager()
