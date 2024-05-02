@@ -4,7 +4,7 @@
 {%block title%} Register {%endblock%}
 {%block content%}
 <div class="formdiv">
-    <form method="post" autocapitalize="on" autocomplete="off">
+    <form method="post" autocapitalize="on" autocomplete="off" enctype="multipart/form-data">
         <h3 id="heading">Register</h3>
         {%csrf_token%}
         {{userform.as_p}}
