@@ -1,12 +1,19 @@
 {%extends 'base.html'%}
+{%load static %}
 {%block title%}Login{%endblock%}
 
 {%block content%}
     <div class="formdiv">
         <form method="post" enctype="multipart/form-data">
+            <h3 id="heading">Login</h3>
         {%csrf_token%}
         {{userlogin.as_p}}
-        <button type="submit">Submit</button>
+        <div class="btndiv">
+            <button type="submit" id="loginbtn">Login</button>
+            <span class="links">Already have a account? <a id="link" href="{%url 'register'%}">Register</a>
+            <span class="links">or Forgot Password? <a id="link" href="#">Change Password</a>
+        </div>
+      
         </form>
     </div>
 {%endblock%}

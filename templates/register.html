@@ -9,10 +9,12 @@
         {%csrf_token%}
         {{userform.as_p}}
     <p id="errorlist"></p>
-    <div id="btndiv">
-    <button type="submit" id="submitbtn">SUBMIT</button>
-    </div>
-    </form>
+    <div class="btndiv">
+    <button type="submit" id="loginbtn">SUBMIT</button>
+    <span class="links">Already have a account? <a id="link" href="{%url 'login'%}">Login</a>
+    <span class="links">or Forgot Password? <a id="link" href="#">Change Password</a>
+</div>
+</form>
     </div>
 
 

@@ -3,7 +3,7 @@ let confirmpass = document.getElementById("id_confirm_password");
 let submitbtn = document.getElementById("submitbtn");
 let errorlist = document.getElementById("errorlist");
 let  emailvalue=document.getElementById("id_email");
-
+errorlist.style.fontSize="25px";
 emailvalue.addEventListener("keyup",()=>{
     emailvalidation();
 })
@@ -25,7 +25,7 @@ function confrimpassword(){
     else{
         errorlist.style.display="";
         errorlist.innerText="Password is not matching".toUpperCase();
-        errorlist.style.color="red";        
+        errorlist.style.color="white";  
         submitbtn.type="button";       
     }
 }
@@ -46,7 +46,7 @@ function emailvalidation() {
     else{
         errorlist.style.display="";
         errorlist.innerText="Email is not valid".toUpperCase();
-        errorlist.style.color="red";
+        errorlist.style.color="white";
     }
   }
 
