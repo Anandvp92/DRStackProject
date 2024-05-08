@@ -1,3 +1,4 @@
+from typing import Any
 from django import forms
 from .models import User
 class UserForm(forms.ModelForm):  
@@ -6,3 +7,11 @@ class UserForm(forms.ModelForm):
     class Meta:
         model= User
         fields=["first_name","last_name","phone_number","email","profile_pic"]
+
+    def save(self, commit=False) -> Any:
+        user = super().save(commit=False)
+        password = self.cleaned_data.get("password")
+        user.set_password(password)
+        if not commit:
+            user.save()
+        return user
