@@ -7,7 +7,6 @@ class UserForm(forms.ModelForm):
     confirm_password=forms.CharField(widget=forms.PasswordInput())  
     class Meta:
         model= User
-<<<<<<< HEAD
         fields=["first_name","last_name","phone_number","email","profile_pic","password"]
     def save(self,commit=True):
         newuser=super().save(commit=False)
@@ -26,14 +25,3 @@ class LoginForm(forms.Form):
       
 
        
-=======
-        fields=["first_name","last_name","phone_number","email","profile_pic"]
-
-    def save(self, commit=False) -> Any:
-        user = super().save(commit=False)
-        password = self.cleaned_data.get("password")
-        user.set_password(password)
-        if not commit:
-            user.save()
-        return user
->>>>>>> e97a5a59ca6659e535f211819299ac625db8d8e1

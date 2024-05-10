@@ -17,7 +17,11 @@ form{
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50px;
-    padding: 50px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-shadow: 80px 30px 80px ;
 
 }
