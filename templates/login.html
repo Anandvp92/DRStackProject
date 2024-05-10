@@ -9,11 +9,11 @@
         {%csrf_token%}
         {{userlogin.as_p}}
         <div class="btndiv">
-            <button type="submit" id="loginbtn">Login</button>
+            <button type="submit"  id="loginbtn">Login</button>
             <span class="links">Already have a account? <a id="link" href="{%url 'register'%}">Register</a>
             <span class="links">or Forgot Password? <a id="link" href="#">Change Password</a>
-        </div>
-      
+            <p id="errorlist"></p>
+        </div>      
         </form>
     </div>
 {%endblock%}
